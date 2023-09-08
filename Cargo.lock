@@ -3,5 +3,47 @@
 version = 3
 
 [[package]]
+name = "document_management"
+version = "0.1.0"
+
+[[package]]
+name = "notification_system"
+version = "0.1.0"
+
+[[package]]
 name = "oa_system"
+version = "0.1.0"
+dependencies = [
+ "document_management",
+ "notification_system",
+ "reporting_and_analysis",
+ "system_settings",
+ "user_management",
+ "utils",
+ "workflow_definition",
+ "workflow_instance",
+]
+
+[[package]]
+name = "reporting_and_analysis"
+version = "0.1.0"
+
+[[package]]
+name = "system_settings"
+version = "0.1.0"
+
+[[package]]
+name = "user_management"
+version = "0.1.0"
+
+[[package]]
+name = "utils"
+version = "0.1.0"
+
+[[package]]
+name = "workflow_definition"
+version = "0.1.0"
+
+[[package]]
+name = "workflow_instance"
 version = "0.1.0"
