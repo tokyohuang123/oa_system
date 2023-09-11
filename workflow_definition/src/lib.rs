@@ -1,4 +1,4 @@
-mod comm;
+pub mod comm;
 // 使用模块中的内容
 use comm::step::{WorkflowStep, WorkflowAction};
 use comm::template::WorkflowTemplate;

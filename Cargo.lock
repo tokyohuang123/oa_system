@@ -47,3 +47,6 @@ version = "0.1.0"
 [[package]]
 name = "workflow_instance"
 version = "0.1.0"
+dependencies = [
+ "workflow_definition",
+]
