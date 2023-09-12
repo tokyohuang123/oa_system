@@ -3,7 +3,7 @@ use workflow_definition::comm::template::WorkflowTemplate;
 
 // 定义WorkflowInstance结构体
 pub struct WorkflowInstance {
-   pub id: u32,
+ id: u32,
     current_step: usize,
     status: WorkflowStatus,
     template: WorkflowTemplate,
@@ -18,15 +18,45 @@ impl WorkflowInstance {
             template:template
         }
     }
-    pub fn status(&self)->&WorkflowStatus {
-        &self.status
-}
-    pub fn current_step(&self)->usize {
-        self.current_step
-    }
+
+        // Getter 方法
+        pub fn get_id(&self) -> u32 {
+            self.id
+        }
+
+        pub fn get_current_step(&self) -> usize {
+            self.current_step
+        }
+
+        pub fn get_status(&self) -> &WorkflowStatus {
+            &self.status
+        }
+
+        pub fn get_template(&self) -> &WorkflowTemplate {
+            &self.template
+        }
+
+        // Setter 方法
+        pub fn set_id(&mut self, id: u32) {
+            self.id = id;
+        }
+
+        pub fn set_current_step(&mut self, current_step: usize) {
+            self.current_step = current_step;
+        }
+
+        pub fn set_status(&mut self, status: WorkflowStatus) {
+            self.status = status;
+        }
+
+        pub fn set_template(&mut self, template: WorkflowTemplate) {
+            self.template = template;
+        }
+
+
 }
 // 定义WorkflowStatus枚举
-#[derive(Debug,PartialEq)]
+#[derive(Debug,PartialEq,Clone)]
 pub enum WorkflowStatus {
     Pending,
     Running,
@@ -50,7 +80,7 @@ mod tests {
 
         assert_eq!(instance.id, 1);
         assert_eq!(instance.current_step, 0);
-        assert_eq!(instance.status(), WorkflowStatus::Pending);
+        assert_eq!(*instance.get_status(), WorkflowStatus::Pending);
     }
 
     #[test]
