@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 user_management = { path = "./user_management" }
+employee_management = { path = "./employee_management" }
 workflow_definition = { path = "./workflow_definition" }
 workflow_instance={path = "./workflow_instance"}
 notification_system={path = "./notification_system"}

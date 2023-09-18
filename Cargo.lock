@@ -7,6 +7,10 @@ name = "document_management"
 version = "0.1.0"
 
 [[package]]
+name = "employee_management"
+version = "0.1.0"
+
+[[package]]
 name = "notification_system"
 version = "0.1.0"
 
@@ -15,6 +19,7 @@ name = "oa_system"
 version = "0.1.0"
 dependencies = [
  "document_management",
+ "employee_management",
  "notification_system",
  "reporting_and_analysis",
  "system_settings",

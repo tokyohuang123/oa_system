@@ -26,7 +26,7 @@ mod tests {
         let mut template = WorkflowTemplate {
             id: 1,
             name: "Test Template".to_string(),
-            description: "A test template".to_string(),
+            description: "A tests template".to_string(),
             version: 1,
             steps: Vec::new(),
         };
@@ -38,7 +38,7 @@ mod tests {
         let step = WorkflowStep {
             id: 1,
             name: "Test Step".to_string(),
-            description: "A test step".to_string(),
+            description: "A tests step".to_string(),
             order: 1,
             actions: vec![WorkflowAction::Approve, WorkflowAction::Reject],
         };
